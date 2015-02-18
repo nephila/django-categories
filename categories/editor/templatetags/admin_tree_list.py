@@ -35,7 +35,7 @@ def items_for_tree_result(cl, result, form):
             result_repr = EMPTY_CHANGELIST_VALUE
         else:
             if f is None:
-                if django.VERSION[1] == 4:
+                if django.VERSION[1] >= 4:
                     if field_name == 'action_checkbox':
                         row_class = ' class="action-checkbox disclosure"'
                 allow_tags = getattr(attr, 'allow_tags', False)
